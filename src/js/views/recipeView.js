@@ -4,11 +4,11 @@ import { Fraction } from 'fractional';
 import ParentView from './parentView.js';
 
 class RecipeView extends ParentView {
+  _parentElement = document.querySelector('.recipe');
+  _errorMsg = 'Please input a search query!';
   constructor() {
     super();
   }
-  _parentElement = document.querySelector('.recipe');
-  _errorMsg = 'Please input a search query!';
 
   _generateHtml() {
     return ` <figure class="recipe__fig">

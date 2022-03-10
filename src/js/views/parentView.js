@@ -8,6 +8,8 @@ export default class ParentView {
   }
 
   render(data) {
+    if (!data || (Array.isArray(data) && data.length === 0))
+      return this.renderError();
     this._data = data;
     const html = this._generateHtml();
     this.#clear();
