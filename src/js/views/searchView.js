@@ -13,6 +13,7 @@ class SearchView {
   addSearchHandler(handlerFn) {
     this._parentElement.addEventListener('submit', function (e) {
       e.preventDefault();
+      e.stopImmediatePropagation();
       handlerFn();
     });
   }
